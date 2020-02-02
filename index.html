@@ -1,0 +1,105 @@
+<!--Gord Bond, 000786196--->
+<!--Date Created: Sept. 10, 2019--->
+<!--I, Gord Bond, 000786196 certify that this material is my original work. No other person's work 
+has been used without due acknowledgement.-->
+<!-- HTML for the Assignment 2 memory game. It is the view. -->
+
+<!DOCTYPE = "html">
+<html>
+    <head>
+        <title>Assignment #2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="css/styles.css">
+        <!-- Link used for hand writing font from google -->
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header containing all the title, player info and rules -->
+        <div id="header">
+            <div id="titleDiv"><img src="img/memoryGameTitle.png" alt="titleForMemoryGame" id="title"></div>
+            <div id="playerInfo">
+                <p id="playerInfoTitle">Player Info</p>
+                <p id="name">Name: </p>
+                <p id="age">Age: </p>
+                <p id="score">Number of pairs: </p>
+                <p id="numOfClicks"></p>
+                <p id="winner">YOU WIN!!!!</p>
+              
+            </div>
+            <div id="helpDiv">
+                <p id="rules">Rules</p>
+                <p>The goal of the game is to find matching pairs of cards.</p>
+                <p>Once you find all 12 pairs you win!</p>
+            </div>
+            <div id="buttons">
+                    <button id="newGameButton">New Game</button>
+                    <button id="helpButton">Help</button>
+                    <button id="showPlayerInfoButton">Player Info</button>
+            </div>
+        </div>
+        <!-- Form used to collect the user's info -->
+        <div id="formDiv">
+                <form id="userForm">
+                        <table>
+                                <tbody>
+                                <tr>
+                                <td class="label"><img src="img/firstName.png" alt="first name"></td>
+                                <td colspan="2"><input type = 'text'  name = 'firstName' required><br></td>
+                                </tr>
+                                <tr>
+                                <td class="label"><img src="img/lastName.png" alt="last name"></td>
+                                <td colspan="2"><input type = 'text'  name = 'lastName' required><br></td>
+                                </tr>
+                                <tr>
+                                <td id="age" class="label"><img src="img/age.png" alt="user age"><br></td>
+                                <td colspan="2"><input type = 'number' id = "playerAge" min = "1" max = "100" step= "1"  name = 'age' width ="100" required><br></td>
+                                </tr>
+                                <tr>
+                                <td class="label"><img src="img/favColour.png" alt="user favourite colour"><br></td>
+                                <td colspan="2"><input type="color" id="colorPicker" name = "playerColour" id="colorPicker" value="#daa520"></td>
+                                </tr>
+                                <tr>
+                                <td colspan="2" id="submitRow"><input type = 'submit' name = 'submitbutton' value="Submit" id="subButton"></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    
+                </form>
+        </div>
+        <!--Memor Table Div contains all the cards (two of each)-->
+        <div id="memoryTableDiv">
+            <ul id="listOfCards">
+                <!-- Each card has a front and back images -->
+                <li class="card"><div class="ant"><img src="img/antCard.png" class="front flippable" ><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="ant"><img src="img/antCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><td class="card"><div class="skull"><img src="img/skullCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><td class="card"><div class="skull"><img src="img/skullCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="bird"><img src="img/birdCard.png" class="front flippable" ><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="bird"><img src="img/birdCard.png" class="front flippable" ><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="tiger"><img src="img/tigerCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="tiger"><img src="img/tigerCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="dog"><img src="img/dogCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="dog"><img src="img/dogCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="wolf"><img src="img/wolfCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="wolf"><img src="img/wolfCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="cat"><img src="img/catCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="cat"><img src="img/catCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="cowboy"><img src="img/cowboyCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="cowboy"><img src="img/cowboyCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="face"><img src="img/faceCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="face"><img src="img/faceCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="car"><img src="img/carCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="car"><img src="img/carCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="jeep"><img src="img/jeepCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="jeep"><img src="img/jeepCard.png" class="front flippable"><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="fly"><img src="img/flyCard.png" class="front flippable" ><img src="img/back.png" class="back"></div></li>
+                <li class="card"><div class="fly"><img src="img/flyCard.png" class="front flippable" ><img src="img/back.png" class="back"></div></li>
+            </ul>
+        </div>
+        <!-- Script for memory game model -->
+        <script src="js/memoryGame.js"></script>
+    </body>
+</html>
+

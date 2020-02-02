@@ -1,0 +1,202 @@
+/*Gord Bond, 000786196
+Date Created: Oct. 10, 2019
+I, Gord Bond, 000786196 certify that this material is my original work. No other person's work 
+has been used without due acknowledgement.
+Style.css is the stylesheet for the a2 memory game.
+*/
+
+/* ----------------------TITLE AND INFO FORMATTING-------------------------- */
+/* Formats div containing the title image 
+*/
+#titleDiv{
+    padding-right:40px;
+    width: 400px;
+}
+
+/* formats the title image - 100% so that it fills containing div */
+#title{
+    width:100%;
+}
+
+/* Formats the div containing the player information */
+#playerInfo{
+    margin-top:2%;
+    margin-left: 2.5%;
+    display:none;
+    font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width:150px;
+    font-size: 1em
+    
+}
+
+/* Formats the header 
+contains the player info, buttons, title and rules
+*/
+#header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* formats winner message - set to hide */
+#winner{
+    font-size: 1.4em;
+    color: rgba(245, 90, 66);
+    display:none;
+}
+
+/* Sets font formatting for player info heading */
+#playerInfoTitle{
+    font-size: 1.2em;
+    text-decoration: underline;
+    
+}
+
+/* Formats the div containing all the buttons */
+#buttons{
+    margin-top: 4%;
+    display: none;
+    padding-left:40px;
+}
+/* Formats the buttons */
+#buttons button{
+    margin-top: 20%;
+    border: none;
+    background-color: rgba(176, 176, 176);
+    color: white;
+    font-family: 'Permanent Marker',Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5%;
+    display: block;
+}
+
+/* sets player info button to display none (hidden) */
+#buttons #showPlayerInfoButton{
+    display:none;
+}
+
+/* Formats the div containing the game rules */
+#helpDiv{
+    margin-top:2%;
+    margin-left: 2.5%;
+    display:none;
+    font-family: 'Permanent Marker',Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width:150px;
+    font-size: 1em
+}
+
+/* Formats the font of the rules */
+#rules{
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+
+/* ---------------------GAME BOARD FORMATTING------------------------------ */
+
+/* Formats the div containing all the cards and game info*/
+#memoryTableDiv { 
+    visibility: hidden;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width:88%;
+    margin:auto;
+}
+
+/* Formats the ul which contains all the cards
+Flex is used so that it is responsive to any 
+browser/device size
+*/
+#memoryTableDiv ul{
+   
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+	align-items: center;
+}
+
+/* Formats the cards(li) for the game */
+#memoryTableDiv ul li{
+    list-style: none;
+    width: 110px;
+    height:110px;
+	border: solid;
+    margin: 1%;
+	border-radius: 4px;
+	box-shadow: 10px 11px 10px -7px rgba(0,0,0,0.75);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* Formats front of the card
+100% so it fills the containing div
+*/
+.front{
+    display:none;
+ 
+    height:100%;
+    width:100%;
+}
+
+/* Formats back of the card
+100% so it fills the containing div
+*/
+.back{
+    
+    height:100%;
+    width:100%;
+    background-color: rgba(247, 239, 215)
+}
+
+
+/* ----------------------USER INFO FORM FORMATTING------------------------- */
+
+
+/* Formats the div containing the form 
+which takes the user info*/
+#formDiv{
+    display: block;
+    width:40%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+/* Formats the labels for the form inputs
+100% so they fill the div which contains them
+*/
+#formDiv img{
+    width:80px;
+}
+
+/*Sizes the columns dynamically for the user info form*/
+#userForm td{
+    /* width: 10%; */
+    width: 100px;
+}
+
+/* Formats the submit button for the user info form */
+#subButton{
+    margin-top: 20%;
+    border: none;
+    background-color: rgba(126, 126, 126);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5%;
+    display: block;
+}
+
+
+
+
+
