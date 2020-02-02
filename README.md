@@ -1,4 +1,4 @@
-# memory_game
+Memory Game - "Remember"
 
 A memory game created for a front-end programming course at Mohawk College
 
